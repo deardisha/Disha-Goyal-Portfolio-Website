@@ -142,6 +142,44 @@
         color: var(--text-primary);
       }
 
+      /* Professional Photo */
+      .hero-photo-card {
+        background: var(--bg-card);
+        backdrop-filter: blur(20px);
+        border: 1px solid var(--border);
+        border-radius: 24px;
+        padding: 1.25rem;
+        max-width: 360px;
+        margin: 0 auto 2rem;
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.35);
+        position: relative;
+        overflow: hidden;
+      }
+
+      .hero-photo-card::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(
+          135deg,
+          rgba(59, 130, 246, 0.18),
+          rgba(139, 92, 246, 0.12),
+          transparent
+        );
+        pointer-events: none;
+      }
+
+      .profile-photo {
+        width: 100%;
+        aspect-ratio: 1 / 1;
+        object-fit: cover;
+        border-radius: 20px;
+        display: block;
+        position: relative;
+        z-index: 1;
+        border: 1px solid rgba(255, 255, 255, 0.14);
+      }
+
       /* Hero Section */
       .hero {
         margin-top: 80px;
@@ -985,12 +1023,13 @@
       <div class="hero-content">
         <div class="hero-text">
           <h1>Hi, I'm Disha Goyal</h1>
-          <p class="tagline">Product & Data Engineer</p>
+          <p class="tagline">Data Engineer | Databricks & Analytics</p>
           <p class="subtitle">
-            Master’s student at USC specializing in data-intensive systems,
-            backend engineering, analytics, and user-centered design. <br />I
-            turn complex data and systems into scalable, intuitive product
-            experiences.
+            MS Computer Science student at USC with hands-on experience building
+            Databricks data pipelines using PySpark, Spark SQL, Delta Lake, JDBC
+            ingestion, medallion architecture, Unity Catalog, and Databricks
+            Workflows. I build clean, validated, AI/BI-ready datasets that
+            support analytics, reporting, and downstream research workflows.
           </p>
           <div class="cta-buttons">
             <a href="#contact" class="btn btn-primary">
@@ -1012,22 +1051,35 @@
             </a>
           </div>
         </div>
-        <div class="hero-stats">
-          <div class="stat-card">
-            <div class="stat-number">3.7</div>
-            <div class="stat-label">GPA (MS)</div>
+        <div>
+          <!-- Add your professional photo in the same folder as this HTML file.
+               Recommended file name: profile-photo.jpg
+               If your file name is different, update the src below. -->
+          <div class="hero-photo-card">
+            <img
+              src="profile-photo.jpg"
+              alt="Professional photo of Disha Goyal"
+              class="profile-photo"
+            />
           </div>
-          <div class="stat-card">
-            <div class="stat-number">9.29</div>
-            <div class="stat-label">GPA (BTech)</div>
-          </div>
-          <div class="stat-card">
-            <div class="stat-number">4+</div>
-            <div class="stat-label">Years Experience</div>
-          </div>
-          <div class="stat-card">
-            <div class="stat-number">USC</div>
-            <div class="stat-label">Graduate Researcher</div>
+
+          <div class="hero-stats">
+            <div class="stat-card">
+              <div class="stat-number">3.75</div>
+              <div class="stat-label">USC MS GPA</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-number">9.29</div>
+              <div class="stat-label">BTech GPA</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-number">100+</div>
+              <div class="stat-label">Research Sessions Cleaned</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-number">2</div>
+              <div class="stat-label">Databricks Projects</div>
+            </div>
           </div>
         </div>
       </div>
@@ -1046,55 +1098,65 @@
           <div class="skills-grid">
             <span class="skill-tag">Python</span>
             <span class="skill-tag">SQL</span>
-            <span class="skill-tag">C++</span>
-            <span class="skill-tag">JavaScript</span>
-            <span class="skill-tag">HTML/CSS</span>
-
-            <span class="skill-tag">Backend Systems</span>
-            <span class="skill-tag">RESTful APIs</span>
-            <span class="skill-tag">Data-Intensive Systems</span>
-            <span class="skill-tag">Schema Design</span>
-            <span class="skill-tag">Query Optimization</span>
-
-            <span class="skill-tag">PostgreSQL</span>
-            <span class="skill-tag">MongoDB</span>
+            <span class="skill-tag">PySpark</span>
+            <span class="skill-tag">Spark SQL</span>
+            <span class="skill-tag">Apache Spark</span>
+            <span class="skill-tag">ETL/ELT Pipelines</span>
+            <span class="skill-tag">JDBC Ingestion</span>
+            <span class="skill-tag">Batch Processing</span>
+            <span class="skill-tag">Incremental Ingestion</span>
+            <span class="skill-tag">CDC Concepts</span>
+            <span class="skill-tag">Data Cleaning</span>
+            <span class="skill-tag">Data Validation</span>
+            <span class="skill-tag">Metadata-Driven Pipelines</span>
+            <span class="skill-tag">Medallion Architecture</span>
+            <span class="skill-tag">Databricks Workflows/Jobs</span>
+            <span class="skill-tag">Lakeflow Connect</span>
+            <span class="skill-tag">Lakeflow Jobs</span>
+            <span class="skill-tag">Lakeflow Spark Declarative Pipelines</span>
+            <span class="skill-tag">Auto Loader</span>
+            <span class="skill-tag">Delta Lake</span>
+            <span class="skill-tag">Delta Tables</span>
+            <span class="skill-tag">Unity Catalog</span>
+            <span class="skill-tag">Secret Scopes</span>
+            <span class="skill-tag">Databricks SQL</span>
+            <span class="skill-tag">COPY INTO</span>
+            <span class="skill-tag">CTAS</span>
+            <span class="skill-tag">MERGE INTO</span>
+            <span class="skill-tag">Streaming Tables</span>
+            <span class="skill-tag">Data Quality Expectations</span>
+            <span class="skill-tag">Job Triggers</span>
+            <span class="skill-tag">Task Dependencies</span>
+            <span class="skill-tag">Failure Handling</span>
+            <span class="skill-tag">Monitoring</span>
             <span class="skill-tag">MySQL</span>
-            <span class="skill-tag">DuckDB</span>
-
-            <span class="skill-tag">AWS</span>
-            <span class="skill-tag">GCP</span>
-            <span class="skill-tag">Databricks</span>
-
-            <span class="skill-tag">Data Analysis</span>
-            <span class="skill-tag">User Research</span>
-            <span class="skill-tag">User Workflow Analysis</span>
-            <span class="skill-tag">UX Design</span>
+            <span class="skill-tag">MariaDB</span>
+            <span class="skill-tag">Dimensional Modeling</span>
+            <span class="skill-tag">Excel</span>
+            <span class="skill-tag">Power BI</span>
+            <span class="skill-tag">Tableau</span>
+            <span class="skill-tag">Git/GitHub</span>
+            <span class="skill-tag">CI/CD Fundamentals</span>
           </div>
         </div>
         <div class="about-text">
           <p>
-            I specialize in building
-            <strong>data-intensive systems</strong> that balance technical
-            robustness with thoughtful user experience. With a strong foundation
-            in Computer Science from VIT (9.29/10) and currently pursuing my MS
-            at USC (3.7/4.0), I bring a unique blend of
-            <strong>
-              backend engineering, data analysis, and user-centered design
-              sensibility.</strong
-            >
+            I am a <strong>Data Engineer</strong> focused on building reliable
+            data pipelines, validated datasets, and dashboard-ready models for
+            analytics, reporting, and AI/BI use cases.
           </p>
           <p>
-            My experience spans analyzing
-            <strong>human-interaction datasets</strong>
-            at USC’s Institute for Creative Technologies and designing
-            <strong
-              >data-driven reliability and predictive maintenance
-              systems</strong
-            >
-            at Cosasco. Across roles, I focus on understanding real user
-            workflows and translating complex needs into
-            <strong> scalable, maintainable technical solutions</strong> that
-            are intuitive to use and easy to extend.
+            My current work includes cleaning and validating AI-generated
+            transcript data at
+            <strong>USC’s Institute for Creative Technologies</strong>,
+            extracting and documenting engineering data at
+            <strong>Cosasco</strong>, and supporting client-facing analytics
+            dashboards at <strong>Blackcoffer</strong>.
+          </p>
+          <p>
+            I’m especially interested in Databricks, lakehouse architecture,
+            PySpark, SQL transformations, data quality, and building structured
+            datasets that downstream teams can trust and use confidently.
           </p>
         </div>
       </div>
@@ -1106,44 +1168,47 @@
         Professional <span class="highlight">Experience</span>
       </h2>
       <div class="timeline">
-        <!-- Job 1 -->
         <div class="timeline-item">
           <div class="timeline-header">
             <div>
               <div class="timeline-title">
-                Graduate Research Assistant - Data Analyst
+                Graduate Research Assistant - Data Engineering
               </div>
               <div class="timeline-company">
                 Institute for Creative Technologies, USC
               </div>
             </div>
-            <div class="timeline-date">Jan 2026 - Present</div>
+            <div class="timeline-date">Jan 2026 - May 2026</div>
           </div>
           <div class="timeline-content">
             <ul>
               <li>
-                Designed and analyzed large-scale multimodal dataset capturing
-                repeated negotiations, enabling longitudinal analysis of
-                strategy adaptation and trust dynamics
+                Cleaned and validated WhisperX-generated transcription and
+                speaker-diarization outputs for 100+ multi-issue bargaining
+                negotiation sessions, preparing structured datasets for
+                downstream conversational AI and negotiation-behavior research.
               </li>
               <li>
-                Built longitudinal analytical datasets and labeling pipelines to
-                quantify bluffing, emotional regulation, and strategy shifts
-                across sessions
+                Converted raw AI-generated conversation outputs into
+                standardized speaker-wise transcript records across session ID,
+                speaker label, timestamp, and utterance fields.
               </li>
               <li>
-                Developed data pipelines for behavioral analytics using Python
-                and SQL
+                Corrected speaker-attribution errors, missing dialogue turns,
+                inaccurate text, and formatting inconsistencies to improve
+                dataset quality, reliability, and usability for AI/ML research
+                workflows.
               </li>
             </ul>
           </div>
         </div>
 
-        <!-- Job 2 -->
         <div class="timeline-item">
           <div class="timeline-header">
             <div>
-              <div class="timeline-title">Engineering Intern</div>
+              <div class="timeline-title">
+                Engineering Intern - Data Infrastructure
+              </div>
               <div class="timeline-company">Cosasco, Santa Fe Springs, CA</div>
             </div>
             <div class="timeline-date">Sept 2025 - Jan 2026</div>
@@ -1151,27 +1216,31 @@
           <div class="timeline-content">
             <ul>
               <li>
-                Analyzed embedded sensor and system data using SQL and MariaDB
-                to identify failure patterns, supporting predictive maintenance
-                initiatives
+                Extracted and analyzed engineering test data from Anotrol 2020
+                CPS using SQL and MariaDB on Raspberry Pi, supporting
+                reliability assessment, troubleshooting, and predictive
+                maintenance workflows.
               </li>
               <li>
-                Improved usability of monitoring tools through data-driven
-                insights and technical documentation standardization
+                Developed repeatable database export procedures and technical
+                instructions for RDU test data, standardizing data extraction
+                steps and reducing manual dependency for future analysis.
               </li>
               <li>
-                Enhanced cross-team alignment for engineers consuming system
-                outputs through clear data visualization
+                Maintained structured test-set tracking, procedure mapping, and
+                engineering documentation to support test infrastructure, data
+                traceability, and new product enablement workflows.
               </li>
             </ul>
           </div>
         </div>
 
-        <!-- Job 3 -->
         <div class="timeline-item">
           <div class="timeline-header">
             <div>
-              <div class="timeline-title">Full Stack Development Intern</div>
+              <div class="timeline-title">
+                Backend and Data Analytics Intern
+              </div>
               <div class="timeline-company">
                 Blackcoffer Pvt. Ltd., Delhi, India
               </div>
@@ -1181,46 +1250,19 @@
           <div class="timeline-content">
             <ul>
               <li>
-                Designed backend services and RESTful APIs using Node.js and
-                MongoDB, ensuring clear data contracts for user-facing features
+                Supported backend data operations for client-facing analytics
+                dashboards by preparing structured datasets, validating data
+                flows, and assisting with SQL-based API/data integration tasks.
               </li>
               <li>
-                Modeled schemas and endpoints to support search, filtering, and
-                reporting workflows, enabling scalable user experiences
+                Organized relational client data for reporting and internal
+                analytics, troubleshooting data availability and validation
+                issues with backend, dashboard, and frontend teams.
               </li>
               <li>
-                Implemented database indexing strategies and query optimization
-                for performance-critical operations
-              </li>
-            </ul>
-          </div>
-        </div>
-
-        <!-- Job 4 -->
-        <div class="timeline-item">
-          <div class="timeline-header">
-            <div>
-              <div class="timeline-title">Frontend Development Intern</div>
-              <div class="timeline-company">
-                Summerhill Technologies Pvt. Ltd, Shimla, India
-              </div>
-            </div>
-            <div class="timeline-date">Jun 2022 - Jul 2022</div>
-          </div>
-          <div class="timeline-content">
-            <ul>
-              <li>
-                Built and optimized company contact page using HTML, CSS,
-                Bootstrap, and JavaScript, improving usability and online
-                presence
-              </li>
-              <li>
-                Contributed to UX-focused design updates that increased online
-                traffic by 10%
-              </li>
-              <li>
-                Implemented responsive design principles for cross-device
-                compatibility
+                Improved reliability of analytics deliverables through data
+                validation, issue troubleshooting, and cross-functional
+                coordination.
               </li>
             </ul>
           </div>
@@ -1234,39 +1276,89 @@
         Featured <span class="highlight">Projects</span>
       </h2>
       <div class="projects-grid">
-        <!-- Project 1 -->
         <div class="project-card">
           <div class="project-header">
-            <div class="project-title">Twist Tile Golf</div>
+            <div class="project-title">
+              Finance Domain End-to-End Data Engineering Pipeline
+            </div>
             <div class="project-tech">
-              <span class="tech-badge">C#</span>
-              <span class="tech-badge">Unity</span>
-              <span class="tech-badge">Game Design</span>
+              <span class="tech-badge">Databricks</span>
+              <span class="tech-badge">PySpark</span>
+              <span class="tech-badge">Spark SQL</span>
+              <span class="tech-badge">Delta Lake</span>
+              <span class="tech-badge">Unity Catalog</span>
             </div>
           </div>
           <div class="project-body">
             <p>
-              Designed and implemented a 2D physics-based puzzle game featuring
-              tile-rotation interaction mechanics. Focused on intuitive player
-              controls, physics-driven feedback, and strategic level design to
-              enhance user engagement.
+              Built an end-to-end Databricks lakehouse pipeline for finance data
+              using PySpark, Spark SQL, JDBC ingestion, Auto Loader-based
+              incremental ingestion, and Delta Lake. Followed Bronze, Silver,
+              and Gold medallion architecture to clean, model, and load source
+              data into analytics-ready Delta tables for BI, reporting, and
+              AI/ML consumption.
+            </p>
+            <p>
+              Orchestrated workflows using Databricks Jobs, nested dependencies,
+              Secret Scopes, Unity Catalog, and email alerts, enabling governed
+              access, monitoring, and business-ready consumption through
+              Dashboards and Genie.
             </p>
             <div class="project-links">
               <a
-                href="https://github.com/CSCI-526-Spring-2025/csci-526-final-project-putter-pirates"
+                href="https://github.com/deardisha/epa-emissions-databricks-dashboard"
+                target="_blank"
                 class="project-link"
-                ><i class="fab fa-github"></i> View Code</a
               >
-              <a
-                href="https://csci-526-spring-2025.github.io/csci-526-final-project-putter-pirates/GoldBuild/"
-                class="project-link"
-                ><i class="fas fa-play"></i> Live Demo</a
-              >
+                <i class="fab fa-github"></i> View Code
+              </a>
             </div>
           </div>
         </div>
 
-        <!-- Project 2 -->
+        <div class="project-card">
+          <div class="project-header">
+            <div class="project-title">
+              U.S. EPA Emissions Analytics Dashboard
+            </div>
+            <div class="project-tech">
+              <span class="tech-badge">Databricks SQL</span>
+              <span class="tech-badge">Data Visualization</span>
+              <span class="tech-badge">Data Cleaning</span>
+              <span class="tech-badge">Analytics</span>
+            </div>
+          </div>
+          <div class="project-body">
+            <p>
+              Built Databricks SQL workflows to ingest, clean, and transform EPA
+              emissions data for state and county-level analysis, including
+              numeric type conversion and population-based calculations.
+            </p>
+            <p>
+              Created dashboard-ready datasets and visualizations to identify
+              high-emission regions, compare normalized emissions trends, and
+              support geographic emissions analysis.
+            </p>
+            <div class="project-links">
+              <a
+                href="https://github.com/deardisha/epa-emissions-databricks-dashboard"
+                target="_blank"
+                class="project-link"
+              >
+                <i class="fab fa-github"></i> View Code
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <h2
+        class="section-title"
+        style="font-size: 2.3rem; margin-top: 5rem; margin-bottom: 3rem"
+      >
+        Additional <span class="highlight">Projects</span>
+      </h2>
+      <div class="projects-grid">
         <div class="project-card">
           <div class="project-header">
             <div class="project-title">DuckDB Zonemap Optimization</div>
@@ -1286,11 +1378,13 @@
             <div class="project-links">
               <a
                 href="https://github.com/justsunli/fall25-csci543-project2"
+                target="_blank"
                 class="project-link"
                 ><i class="fab fa-github"></i> View Code</a
               >
               <a
                 href="https://drive.google.com/file/d/1l0NS5epz6L-C_Y9sSpg7BwjbashMuli9/view?usp=sharing"
+                target="_blank"
                 class="project-link"
                 ><i class="fas fa-file-alt"></i> Research Paper</a
               >
@@ -1298,7 +1392,48 @@
           </div>
         </div>
 
-        <!-- Project 3 -->
+        <div class="project-card">
+          <div class="project-header">
+            <div class="project-title">
+              Cropable - AI Crop Disease Detection
+            </div>
+            <div class="project-tech">
+              <span class="tech-badge">Python</span>
+              <span class="tech-badge">Flask</span>
+              <span class="tech-badge">TensorFlow</span>
+              <span class="tech-badge">Keras</span>
+              <span class="tech-badge">CNN</span>
+              <span class="tech-badge">VGG16</span>
+              <span class="tech-badge">OpenCV</span>
+            </div>
+          </div>
+          <div class="project-body">
+            <p>
+              Built an AI-powered web application for crop disease detection
+              using tomato leaf images. Implemented image preprocessing,
+              CNN/VGG16-based classification across disease classes, and a
+              recommendation layer that suggests treatment measures based on the
+              detected disease.
+            </p>
+            <div class="project-links">
+              <a
+                href="https://github.com/Shashwat53/Cropable/blob/main/README.md"
+                target="_blank"
+                class="project-link"
+              >
+                <i class="fab fa-github"></i> View Code
+              </a>
+              <a
+                href="https://www.e3s-conferences.org/articles/e3sconf/pdf/2024/21/e3sconf_icecs2024_01001.pdf"
+                target="_blank"
+                class="project-link"
+              >
+                <i class="fas fa-file-alt"></i> Publication
+              </a>
+            </div>
+          </div>
+        </div>
+
         <div class="project-card">
           <div class="project-header">
             <div class="project-title">Artist Search Backend API</div>
@@ -1312,24 +1447,59 @@
             <p>
               Designed REST APIs and data models to support search, filtering,
               and favorites workflows. Built scalable backend services
-              delivering smooth and intuitive user interactions with optimized
-              database queries.
+              delivering smooth user interactions with optimized database
+              queries.
             </p>
             <div class="project-links">
               <a
                 href="https://github.com/deardisha/Artist-Search"
+                target="_blank"
                 class="project-link"
                 ><i class="fab fa-github"></i> View Code</a
               >
               <a
                 href="https://drive.google.com/file/d/1w-kKTz6KtpfUjFFwlJJqchL2e7WXiGID/view?usp=sharing"
+                target="_blank"
                 class="project-link"
                 ><i class="fas fa-book"></i> Documentation</a
               >
             </div>
           </div>
         </div>
-        <!-- Project 4: FoodEsy -->
+
+        <div class="project-card">
+          <div class="project-header">
+            <div class="project-title">Twist Tile Golf</div>
+            <div class="project-tech">
+              <span class="tech-badge">C#</span>
+              <span class="tech-badge">Unity</span>
+              <span class="tech-badge">Game Design</span>
+            </div>
+          </div>
+          <div class="project-body">
+            <p>
+              Designed and implemented a 2D physics-based puzzle game featuring
+              tile-rotation interaction mechanics. Focused on intuitive player
+              controls, physics-driven feedback, and strategic level design to
+              enhance engagement.
+            </p>
+            <div class="project-links">
+              <a
+                href="https://github.com/CSCI-526-Spring-2025/csci-526-final-project-putter-pirates"
+                target="_blank"
+                class="project-link"
+                ><i class="fab fa-github"></i> View Code</a
+              >
+              <a
+                href="https://csci-526-spring-2025.github.io/csci-526-final-project-putter-pirates/GoldBuild/"
+                target="_blank"
+                class="project-link"
+                ><i class="fas fa-play"></i> Live Demo</a
+              >
+            </div>
+          </div>
+        </div>
+
         <div class="project-card">
           <div class="project-header">
             <div class="project-title">FoodEsy</div>
@@ -1345,23 +1515,22 @@
             <p>
               Developed a full-stack takeaway ordering system for local
               restaurants, enabling customers to place orders online and collect
-              food without standing in long queues. Implemented secure payment
-              flows, real-time order tracking, and responsive UI for seamless
-              mobile and desktop experiences.
+              food without long queues. Implemented secure payment flows,
+              real-time order tracking, and responsive UI.
             </p>
             <div class="project-links">
               <a
                 href="https://github.com/karanjain-ops/FoodEsy"
+                target="_blank"
                 class="project-link"
+                ><i class="fab fa-github"></i> View Code</a
               >
-                <i class="fab fa-github"></i> View Code
-              </a>
               <a
                 href="https://drive.google.com/file/d/1rhYMcikHViDAWptbE07wT9x9bMSwIS3L/view?usp=sharing"
+                target="_blank"
                 class="project-link"
+                ><i class="fas fa-book"></i> Documentation</a
               >
-                <i class="fas fa-book"></i> Documentation
-              </a>
             </div>
           </div>
         </div>
@@ -1377,7 +1546,7 @@
           <div class="edu-degree">Master of Science in Computer Science</div>
           <div class="edu-details">
             <span>Aug 2024 - May 2026</span>
-            <span>GPA: 3.7/4.0</span>
+            <span>GPA: 3.75/4.0</span>
           </div>
         </div>
         <div class="education-card">
@@ -1404,30 +1573,36 @@
       </h3>
       <div class="cert-grid">
         <div class="cert-card">
-          <div class="cert-title">Foundations of UX Design</div>
-          <div class="cert-issuer">Google Career Certificates</div>
+          <div class="cert-title">
+            Databricks Certified Data Engineer Associate
+          </div>
+          <div class="cert-issuer">In Progress</div>
         </div>
         <div class="cert-card">
-          <div class="cert-title">AI/BI for Data Analysts</div>
-          <div class="cert-issuer">Databricks Academy</div>
+          <div class="cert-title">Data Ingestion with Lakeflow Connect</div>
+          <div class="cert-issuer">Databricks Academy • July 5, 2026</div>
+        </div>
+        <div class="cert-card">
+          <div class="cert-title">
+            Build Data Pipelines with Lakeflow Spark Declarative Pipelines
+          </div>
+          <div class="cert-issuer">Databricks Academy • July 2, 2026</div>
+        </div>
+        <div class="cert-card">
+          <div class="cert-title">Deploy Workloads with Lakeflow Jobs</div>
+          <div class="cert-issuer">Databricks Academy • June 30, 2026</div>
+        </div>
+        <div class="cert-card">
+          <div class="cert-title">DevOps Essentials for Data Engineering</div>
+          <div class="cert-issuer">Databricks Academy • June 28, 2026</div>
         </div>
         <div class="cert-card">
           <div class="cert-title">SQL Analytics on Databricks</div>
           <div class="cert-issuer">Databricks Academy</div>
         </div>
         <div class="cert-card">
-          <div class="cert-title">
-            Python for Data Science: AI & Development
-          </div>
-          <div class="cert-issuer">Certified Course on Coursera</div>
-        </div>
-        <div class="cert-card">
-          <div class="cert-title">Web Development Bootcamp</div>
-          <div class="cert-issuer">Certified Course on Udemy</div>
-        </div>
-        <div class="cert-card">
-          <div class="cert-title">JAVA Programming</div>
-          <div class="cert-issuer">Certified Course on Udemy</div>
+          <div class="cert-title">AI/BI for Data Analysts</div>
+          <div class="cert-issuer">Databricks Academy</div>
         </div>
       </div>
     </section>
@@ -1445,9 +1620,9 @@
             margin-bottom: 2rem;
           "
         >
-          I'm currently open to Data Engineering, Software Engineering, and
-          Product/UX opportunities. Let's discuss how I can contribute to your
-          team!
+          I'm currently open to Data Engineering, Data Analyst, Analytics
+          Engineer, Business Intelligence, and related CS/IT opportunities.
+          Let’s discuss how I can contribute to your team.
         </p>
         <div class="contact-links">
           <a href="mailto:dishagoyal2001@gmail.com" class="contact-item">
@@ -1472,7 +1647,10 @@
 
     <!-- Footer -->
     <footer>
-      <p>&copy; 2026 Disha Goyal. Built with HTML, CSS & a passion for data.</p>
+      <p>
+        &copy; 2026 Disha Goyal. Built with HTML, CSS & a passion for data
+        engineering.
+      </p>
     </footer>
 
     <script>
