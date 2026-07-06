@@ -1,62 +1,39 @@
-# Disha Goyal Portfolio Website
+# Disha Goyal - Portfolio Website
 
-Personal portfolio website for Disha Goyal, focused on Data Engineering, Databricks, Data Analytics, BI, and related CS/IT opportunities.
+This is my personal portfolio website showcasing my background in Data Engineering, Data Analytics, Databricks, SQL, Python, and Business Intelligence.
 
-## Live sections
+## About Me
 
-- Hero introduction with professional photo placeholder
-- Technical skills
-- Professional experience
-- Featured resume projects
-- Additional projects
-- Education and Databricks certifications/badges
-- Contact links
+I am a recent MS Computer Science graduate from the University of Southern California with experience in data engineering, data validation, ETL/ELT workflows, Databricks, PySpark, SQL, dashboard-ready datasets, and analytics-focused projects.
 
-## Files to include in the GitHub Pages repository
+I am currently open to Data Engineering, Data Analyst, Analytics Engineer, Business Intelligence, and related CS/IT opportunities.
 
-```text
-index.html
-Disha_Goyal_Resume.pdf
-profile-photo.jpg
-README.md
-```
+## Featured Projects
 
-## Setup instructions
+### Finance Databricks Lakehouse Pipeline
+Built an end-to-end Databricks lakehouse pipeline using PySpark, Spark SQL, JDBC ingestion, Auto Loader, Delta Lake, Unity Catalog, and Databricks Workflows. The project follows Bronze, Silver, and Gold medallion architecture and produces analytics-ready datasets for BI, reporting, and AI/ML use cases.
 
-1. Rename `Disha_Goyal_Portfolio_Full_Code.html` to `index.html`.
-2. Keep `Disha_Goyal_Resume.pdf` in the same folder as `index.html` so the resume download button works.
-3. Add a professional headshot named `profile-photo.jpg` in the same folder.
-4. Push the files to the GitHub Pages repository.
+### U.S. EPA Emissions Analytics Dashboard
+Built Databricks SQL workflows to clean, transform, and analyze EPA emissions data. Created dashboard-ready datasets and visualizations to compare emissions by state/county and identify high-emission regions.
 
-## Photo instructions
+### DuckDB Zonemap Optimization
+Extended DuckDB query execution by integrating column imprint bitmaps with zonemap pruning to improve predicate filtering efficiency.
 
-The website currently expects the photo file to be named:
+### Cropable - AI Crop Disease Detection
+Built an AI-powered crop disease detection system using image preprocessing and CNN/VGG16-based classification, with a published research paper.
 
-```html
-<img src="profile-photo.jpg" alt="Professional photo of Disha Goyal" class="profile-photo" />
-```
+## Technical Skills
 
-If the photo has a different name, update the `src` value in the HTML.
+- Python, SQL, PySpark, Spark SQL, Apache Spark
+- Databricks, Delta Lake, Unity Catalog, Auto Loader
+- ETL/ELT pipelines, data validation, medallion architecture
+- MySQL, MariaDB, dimensional modeling
+- Power BI, Tableau, Excel
+- Git, GitHub, CI/CD fundamentals
 
-## Resume download button
+## How to View
 
-The hero section includes a resume download button:
-
-```html
-<a href="Disha_Goyal_Resume.pdf" download class="btn btn-secondary">
-  <i class="fas fa-file-download"></i> Download Resume
-</a>
-```
-
-## Contact behavior
-
-The “Get In Touch” button opens a direct email draft to:
+Open `index.html` in a browser or visit the live GitHub Pages link:
 
 ```text
-dishagoyal2001@gmail.com
-```
-
-## Main positioning
-
-Open to Data Engineering, Data Analyst, Analytics Engineer, Business Intelligence, and related CS/IT opportunities.
-
+https://deardisha.github.io/Disha-Goyal-Portfolio-Website/
